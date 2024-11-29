@@ -47,7 +47,7 @@ This action is a `node20` action.
 ## Description
 
 A GitHub Action to run iggy server
-<!-- action-docs-description source="action.yml" --> # applicable for actions only
+<!-- action-docs-description source="action.yml" -->
 
 <!-- action-docs-inputs source="action.yml" -->
 ## Inputs
@@ -70,7 +70,7 @@ A GitHub Action to run iggy server
 ## Runs
 
 This action is a `node20` action.
-<!-- action-docs-runs source="action.yml" --> # applicable for actions only
+<!-- action-docs-runs source="action.yml" -->
 
 ## Contributions
 
