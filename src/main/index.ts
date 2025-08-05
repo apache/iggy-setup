@@ -7,7 +7,7 @@ const DEFAULT_VERSION = "latest";
 
 async function main() {
   let version = core.getInput("version", { required: false });
-  if (version == null || version == "") {
+  if (version === null || version === "") {
     version = DEFAULT_VERSION;
   }
   const autoStart = core.getInput("autostart", { required: false });
@@ -21,6 +21,10 @@ async function main() {
       startIggyServer();
     }
   } catch (error) {
+    core.error(
+      `Failed to setup iggy server (version: ${version} autostart: ${autostart})`,
+      error
+    );
     if (error instanceof Error) {
       core.setFailed(error.message);
     }

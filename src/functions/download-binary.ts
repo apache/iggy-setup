@@ -1,13 +1,12 @@
 import { info } from "@actions/core";
 import { downloadTool, extractZip } from "@actions/tool-cache";
 
-export async function downloadFile(version: string): Promise<string> {
-  const arch = "Linux-x86_64";
+const arch = "Linux-x86_64";
 
-  let binaryUrl = `https://github.com/iggy-rs/iggy/releases/download/server-${version}/${arch}.zip`;
-  if (version === "latest") {
-    binaryUrl = `https://github.com/iggy-rs/iggy/releases/latest/download/${arch}.zip`;
-  }
+export async function downloadFile(version: string): Promise<string> {
+  const binaryUrl = version === "latest" ?
+    `https://github.com/iggy-rs/iggy/releases/latest/download/${arch}.zip` :
+    `https://github.com/iggy-rs/iggy/releases/download/server-${version}/${arch}.zip`;
 
   info(`Binary downloaded from ${binaryUrl}`);
 

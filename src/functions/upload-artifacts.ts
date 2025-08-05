@@ -17,5 +17,5 @@ export async function uploadLogs() {
     },
   );
 
-  core.info(`Created artifact with id: ${id} (bytes: ${size}`);
+  core.info(`Created artifact with id: ${id} (bytes: ${size})`);
 }
