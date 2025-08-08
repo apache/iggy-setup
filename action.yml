@@ -1,0 +1,26 @@
+# https://docs.github.com/en/actions/sharing-automations/creating-actions/publishing-actions-in-github-marketplace
+name: "Setup Iggy server"
+author: "Tchoupinax"
+description: "A GitHub Action to run iggy server"
+inputs:
+  version:
+    description: "The Iggy version to launch."
+    required: false
+    default: "latest"
+  autostart:
+    description: "Set to false if you do not want to start iggy server automatically"
+    required: false
+    default: "true"
+outputs:
+  version:
+    description: "The Iggy version that was launched."
+runs:
+  using: "node20"
+  main: "dist/main/index.js"
+  # post-if: "failure()" # TODO Improve later with conditional input
+  post: "dist/post/index.js"
+
+# https://actions-cool.github.io/github-action-branding
+branding:
+  icon: "box"
+  color: "orange"
