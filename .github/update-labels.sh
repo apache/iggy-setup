@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_NAME="iggy-rs/setup-iggy"
+REPO_NAME="apache/iggy-setup"
 API_URL="https://api.github.com/repos/$REPO_NAME/labels"
 
 create_label() {
