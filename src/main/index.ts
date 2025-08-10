@@ -22,8 +22,7 @@ async function main() {
     }
   } catch (error) {
     core.error(
-      `Failed to setup iggy server (version: ${version} autostart: ${autostart})`,
-      error
+      `Failed to setup iggy server (version: ${version} autostart: ${autoStart})`
     );
     if (error instanceof Error) {
       core.setFailed(error.message);
